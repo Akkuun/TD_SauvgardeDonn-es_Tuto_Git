@@ -56,6 +56,9 @@ Les fichiers vont être transportés vers l'index, la prochaine étape est de po
 git commit -m "rectification condition boucle pour eviter cas overflow"
 ```
 
+
+Si jamais il ne passe pas, cela signifie qu'il y a des erreurs de conflit (Cf Erreur de conflit)
+
 puis (Cf branche)
 
 ```
@@ -64,7 +67,12 @@ git push origin [branche]
 
 Voilà le code est bien poussé sur le serveur en ligne !
 
-Si jamais il ne passe pas, cela signifie qu'il y a des erreurs de conflit , pour cela plusieurs manière de faire, directement faire les changements sur l'IDE,
-les lignes qui ont été ajouté seront avec un + devant, et celles supprimées avec - .
 
+# Erreur de conflit 
+Une erreur de conflit signifie que du code à été dupliqué sur les deux version du code (local et celle en ligne), pour cela plusieurs manière de faire, directement faire les changements sur l'IDE, les lignes qui ont été ajouté seront avec un + devant, et celles supprimées avec - , il n'y a plus qu'à garder les lignes voulues.
+
+Généralement on utilise une autre manière de faire, en utilisant des branches on va éviter au maximum ce genre de problèmes (cf Branches).
+
+
+# Branche
 
