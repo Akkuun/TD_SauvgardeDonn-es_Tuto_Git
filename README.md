@@ -80,7 +80,8 @@ Les branches sont des espaces parrallèle qui provienent de la même source (le 
 
 Le but des branches est de structurer et organiser les membres sur le projet.
 
-/!\/!\/!\/!\/!\/!\ NE JAMAIS TRAVAILLER SUR LE MASTER /!\/!\/!\/!\/!\/!\/!\/!\ Toujours travailler sur une branche
+/!\/!\/!\/!\/!\/!\ NE JAMAIS TRAVAILLER SUR LE MASTER /!\/!\/!\/!\/!\/!\/!\/!\ Toujours travailler sur une branche!
 
-Les branches vont petre très utiles pour réaliser des pull request
+Les branches vont être très utiles pour réaliser des pull request. Je m'explique, admettons SamSam travaille  sur une nouvelle fonctionnalité et veut 
+la push sur le master (on suppose qu'elle travaille bien et à bien compris le principe de branche car elle se situe déjà sur la branche SamSam ou une branche décrivant sa fonctionnalité (le plus couraement fait)).
 
