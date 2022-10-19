@@ -50,4 +50,17 @@ généralement on ajoutera tout les fichiers ( certains fichiers pourront être 
 git add .
 ```
 
+Les fichiers vont être transportés vers l'index, la prochaine étape est de pousser vers le serveur en ligne. Pour cela on va tout d'abord indiquer un message permettant de repérer l'utilité du transfert ( /!\ ces messages doit bien être clairs et précis afin de ne pas être ambigüe!)
+
+```
+git commit -m "rectification condition boucle pour eviter cas overflow"
+```
+
+puis 
+
+```
+git push origin [branche]
+```
+
+
 
