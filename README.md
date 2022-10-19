@@ -39,4 +39,15 @@ L'index est la zone intermédiaire entre le code local et le code en ligne, on p
 
 ![git_workflow_001](https://user-images.githubusercontent.com/90316879/196621879-a3470e86-29d4-4618-9851-654fce8cbf0c.png)
 
+La prochaine étape va être de signifié à git les fichiers qu'on veut transféré : 
+```
+git add fichier1.txt
+```
+
+généralement on ajoutera tout les fichiers ( certains fichiers pourront être filtré dans un fichier .gitignore qui contiendra les fichiers à ignorer) avec :
+
+```
+git add .
+```
+
 
