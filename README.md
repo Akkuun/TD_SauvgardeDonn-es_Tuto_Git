@@ -48,11 +48,27 @@ Git/GitHub nous laissent la possiblité de créer nos repository en ligne direct
 - créer un repo 
 - lui donner un nom
 - ajouter un README ( facultatif)
+- ajouter des fichiers en plus (comme la license, gitignore (cf gitignore) ect.. (facultatif)
  
- on aura donc par defaut un lien de repo git qui va nous servir de connexion vers le repo 
+ on aura donc par defaut un lien de repo git qui va nous servir de connexion vers le repo.
  
- il suffit alors de faire :
+ on peut alors initaliser le repo vide et lui envoyer nos fichiers on peut faire :
+ ``` 
+ echo "# tt" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:Akkuun/tt.git
+git push -u origin main
+```
 
+si jamais, on veut importer un projet, on peut lui associer une origine ( son point de connexion avec git/gitHub)
+```
+git remote add origin git@github.com:user/nomrepo.git
+git branch -M main
+git push -u origin main
+```
 
 
 On a donc notre code local qui est prêt à indexé ses fichiers (on parle d'indexage pour le fait à transféré ses fichiers vers l'index).
