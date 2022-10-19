@@ -126,7 +126,7 @@ Le but des branches est de structurer et organiser les membres sur le projet.
 
 /!\/!\/!\/!\/!\/!\ NE JAMAIS TRAVAILLER SUR LE MASTER /!\/!\/!\/!\/!\/!\/!\/!\ Toujours travailler sur une branche!
 
-Les branches vont être très utiles pour réaliser des opérations pour mettre à jour le code par rapport au main/master sans l'interférer (pull request).
+Les branches vont être très utiles pour réaliser des opérations pour mettre à jour le code par rapport au main/master sans l'interférer.
 Je m'explique, admettons SamSam travaille sur une nouvelle fonctionnalité et veut 
 la push sur le master (on suppose qu'elle travaille bien et à bien compris le principe de branche car elle se situe déjà sur la branche SamSam ou une branche décrivant sa fonctionnalité (le plus couraement fait)). Elle va donc fusionner son travail avec le main mais sur sa branche, pour cela elle doit récupérer le master/main en local en faisant :
 
@@ -140,5 +140,10 @@ git add .
 git commit -m "message expliquant clairement ce qu'elle a fait"
 git push origin main
 ```
+
+## Pull request
+
+Il est possible 
+Reprenons notre exemple précédent, 
 
 
