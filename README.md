@@ -62,5 +62,9 @@ puis (Cf branche)
 git push origin [branche]
 ```
 
+Voilà le code est bien poussé sur le serveur en ligne !
+
+Si jamais il ne passe pas, cela signifie qu'il y a des erreurs de conflit , pour cela plusieurs manière de faire, directement faire les changements sur l'IDE,
+les lignes qui ont été ajouté seront avec un + devant, et celles supprimées avec - .
 
 
