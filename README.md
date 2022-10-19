@@ -44,6 +44,8 @@ git init
 ```
 ## Config initiale (depuis source en ligne)
 
+
+### Création de dépôt en ligne 
 Git/GitHub nous laissent la possiblité de créer nos repository en ligne directement depuis son site, pour cela on va 
 - créer un repo 
 - lui donner un nom
@@ -71,7 +73,7 @@ git push -u origin main
 ```
 
 
-On a donc notre code local qui est prêt à indexé ses fichiers (on parle d'indexage pour le fait à transféré ses fichiers vers l'index).
+On a donc notre code local qui est prêt à indexer ses fichiers (on parle d'indexage pour le fait à transféré ses fichiers vers l'index).
 
 L'index est la zone intermédiaire entre le code local et le code en ligne, on peut le représenter de cette manière : 
 
@@ -97,10 +99,15 @@ git commit -m "rectification condition boucle pour eviter cas overflow"
 
 Si jamais il ne passe pas, cela signifie qu'il y a des erreurs de conflit (Cf Erreur de conflit)
 
-puis (Cf branche)
+puis on va pousser vers une origine (ici notre branche) (Cf branche)
 
 ```
 git push origin [branche]
+```
+bien sûr si on travaille seul sur une branche main on peut push sur le master directement mais c'est une mauvaise habitude de travail à avoir (Cf branche)
+
+```
+git push
 ```
 
 Voilà le code est bien poussé sur le serveur en ligne !
