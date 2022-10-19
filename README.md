@@ -1,6 +1,6 @@
 # TD_SauvgardeDonnees_Tuto_Git
 
-# REAME
+# README
 Le fichier Readme permet de spécifié et d'indiquer des infos sur projet à l'utilisateur qui va utiliser le repository.
 Le fichier reame.md (markdown) est codé avec un lagagUe de balisage (comme HTML), c'est utilisé pour réaliser différentes structure de style :
 
@@ -89,7 +89,7 @@ généralement on ajoutera tout les fichiers ( certains fichiers pourront être 
 git add .
 ```
 
-Les fichiers vont être transportés vers l'index, la prochaine étape est de pousser vers le serveur en ligne. Pour cela on va tout d'abord indiquer un message permettant de repérer l'utilité du transfert ( /!\ ces messages doit bien être clairs et précis afin de ne pas être ambigüe!)
+Les fichiers vont être transportés vers l'index (une zone de stockage temporaire avant le transfert vers le serveur en ligne), la prochaine étape est de pousser vers le serveur en ligne. Pour cela on va tout d'abord indiquer un message permettant de repérer l'utilité du transfert ( /!\ ces messages doit bien être clairs et précis afin de ne pas être ambigüe!)
 
 ```
 git commit -m "rectification condition boucle pour eviter cas overflow"
@@ -141,17 +141,20 @@ git commit -m "message expliquant clairement ce qu'elle a fait"
 git push origin main
 ```
 
-## Pull request et Merge request (recupération de contenu du main depuis sa branche secondaire)
+## Pull request et Merge request (mise à jour de branche participative à Mise à jour de branche originelle)
 
 Il est possible de demander une récupération de code de la branche main au propriétaire directement via un pull request.
 
 Reprenons notre exemple précédent, dans notre projet la branche main à été mise à jour par SamSam auparavant et Corentin vient de revenir de vacances et veut travailler sur une fonctionnalité, pour cela il doit récupérer la dernière version à jour du main, il pour cela il peut aller sur Git/GitHub et voir une option qui indique qu'il a du retard par rapport à la version du code du main :
 <img width="660" alt="image" src="https://user-images.githubusercontent.com/90316879/196640143-f886ad6b-457e-4083-94f7-3c4497b3ad1d.png">
 
-Pour rattraper ce retard il va faire une demande de pull request.
+Pour rattraper ce retard il va faire une demande de pull request (toujours avec un message scpécifiant cette demande.
 <img width="903" alt="image" src="https://user-images.githubusercontent.com/90316879/196640510-f6a36d63-2608-4d4d-8acd-de8645d95ef4.png">
 
-Le propriétaitre va alors accepter ou non cette requête (pour lui ce sera une merge Request), s'il acccepte la request sera fermée et la branche de Corentin aura bien récupéré le contenu du main. 
+Le propriétaitre va alors accepter ou non cette requête s'il acccepte la request sera fermée et la branche de Corentin aura bien récupéré le contenu du main. 
+
+Pour résumer, la
 
 
+Le Merge request est la même chose mais dans l'autre sens 
 
