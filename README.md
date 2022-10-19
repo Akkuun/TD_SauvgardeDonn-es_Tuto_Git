@@ -1,8 +1,8 @@
 # TD_SauvgardeDonnees_Tuto_Git
 
 # README
-Le fichier Readme permet de spécifié et d'indiquer des infos sur projet à l'utilisateur qui va utiliser le repository.
-Le fichier reame.md (markdown) est codé avec un lagagUe de balisage (comme HTML), c'est utilisé pour réaliser différentes structure de style :
+Le fichier Readme permet de spécifier et d'indiquer des informations sur projet à l'utilisateur qui va utiliser le repository.
+Le fichier reame.md (markdown) est codé avec un langage de balisage (comme HTML). C'est utilisé pour réaliser différentes structure de style :
 
 # Titre
 ## Sous titre
@@ -16,13 +16,13 @@ Le fichier reame.md (markdown) est codé avec un lagagUe de balisage (comme HTML
 ![Logo](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/th5xamgrr6se0x5ro4g6.png)
 
 # Présentation GitHub/Git
-- GitHub est un service permettant de stocker (héberger) des repository en ligne (souvent utilisé par les particuliers).
+- GitHub est un service permettant de stocker (héberger) des repositories en ligne (souvent utilisé par les particuliers).
 
-- Git est un service de versionning (VCS version control system) permettant de gérer les version des codes sur un serveur en ligne (souvent utilisé en entreprise).
+- Git est un service de versionning (VCS version control system) permettant de gérer les versions des codes sur un serveur en ligne (souvent utilisé en entreprise).
 
-Le code va être stocké sur un repository qui peut être accéder par plusieurs manière , via ssh ou https.
+Le code va être stocké sur un repository qui peut être accédé par plusieurs manières, via ssh ou https.
 
-La manière https est la manière la moins sécurisé car tout le peut peut avoir le lien du repo et le clone si ce dernier est en public.
+La manière https est la moins sécurisée car tout le monde peut avoir le lien du repository et le clone si ce dernier est en public.
 
 La manière avec une clé ssh est plus sécurisé car cette dernière agit comme un token, elle garantit une sécutité en plus.
 
