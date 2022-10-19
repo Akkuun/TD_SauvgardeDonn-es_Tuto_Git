@@ -8,7 +8,7 @@ Le fichier reame.md (markdown) est codé avec un lagagUe de balisage (comme HTML
 ## Sous titre
 
 ```bash
-  git clone https://link-to-project
+  des commandes sur différents langages possible
 ```
 
 - proposition
@@ -23,6 +23,7 @@ Le fichier reame.md (markdown) est codé avec un lagagUe de balisage (comme HTML
 Le code va être stocké sur un repository qui peut être accéder par plusieurs manière , via ssh ou https.
 
 La manière https est la manière la moins sécurisé car tout le peut peut avoir le lien du repo et le clone si ce dernier est en public.
+
 La manière avec une clé ssh est plus sécurisé car cette dernière agit comme un token, elle garantit une sécutité en plus.
 
 Plusieurs outils permettent d'accéder aux services de git :
@@ -62,14 +63,12 @@ git add README.md
 git commit -m "first commit"
 git branch -M main
 git remote add origin git@github.com:Akkuun/tt.git
-git push -u origin main
 ```
 
 si jamais, on veut importer un projet, on peut lui associer une origine ( son point de connexion avec git/gitHub)
 ```
 git remote add origin git@github.com:user/nomrepo.git
 git branch -M main
-git push -u origin main
 ```
 
 
@@ -116,7 +115,7 @@ Voilà le code est bien poussé sur le serveur en ligne !
 # Erreur de conflit 
 Une erreur de conflit signifie que du code à été dupliqué sur les deux version du code (local et celle en ligne), pour cela plusieurs manière de faire, directement faire les changements sur l'IDE, les lignes qui ont été ajouté seront avec un + devant, et celles supprimées avec - , il n'y a plus qu'à garder les lignes voulues.
 
-Généralement on utilise une autre manière de faire, en utilisant des branches on va éviter au maximum ce genre de problèmes (cf Branches).
+Généralement on utilise une autre manière de faire, en utilisant des branches on va éviter au maximum ce genre de problèmes en contrôlant au maximum les erreurs avant qu'elle n'agissent sur la branche main (cf Branches) .
 
 
 # Branche
@@ -127,6 +126,19 @@ Le but des branches est de structurer et organiser les membres sur le projet.
 
 /!\/!\/!\/!\/!\/!\ NE JAMAIS TRAVAILLER SUR LE MASTER /!\/!\/!\/!\/!\/!\/!\/!\ Toujours travailler sur une branche!
 
-Les branches vont être très utiles pour réaliser des pull request. Je m'explique, admettons SamSam travaille  sur une nouvelle fonctionnalité et veut 
-la push sur le master (on suppose qu'elle travaille bien et à bien compris le principe de branche car elle se situe déjà sur la branche SamSam ou une branche décrivant sa fonctionnalité (le plus couraement fait)).
+Les branches vont être très utiles pour réaliser des opérations pour mettre à jour le code par rapport au main/master sans l'interférer (pull request).
+Je m'explique, admettons SamSam travaille sur une nouvelle fonctionnalité et veut 
+la push sur le master (on suppose qu'elle travaille bien et à bien compris le principe de branche car elle se situe déjà sur la branche SamSam ou une branche décrivant sa fonctionnalité (le plus couraement fait)). Elle va donc fusionner son travail avec le main mais sur sa branche, pour cela elle doit récupérer le master/main en local en faisant :
+
+```
+git pull origin [branche]
+```
+Elle va régler les erreurs de conflits s'il y en a. Son code sera donc compatible avec le main car elle sera assurée qu'il y a pas d'erreurs.
+
+```
+git add .
+git commit -m "message expliquant clairement ce qu'elle a fait"
+git push origin main
+```
+
 
