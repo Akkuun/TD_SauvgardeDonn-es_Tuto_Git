@@ -1,6 +1,6 @@
 # TD_SauvgardeDonnees_Tuto_Git
 
-README
+# REAME
 Le fichier Readme permet de spécifié et d'indiquer des infos sur projet à l'utilisateur qui va utiliser le repository.
 Le fichier reame.md (markdown) est codé avec un lagagUe de balisage (comme HTML), c'est utilisé pour réaliser différentes structure de style :
 
@@ -15,7 +15,7 @@ Le fichier reame.md (markdown) est codé avec un lagagUe de balisage (comme HTML
 
 ![Logo](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/th5xamgrr6se0x5ro4g6.png)
 
-
+# Présentation GitHub/Git
 - GitHub est un service permettant de stocker (héberger) des repository en ligne (souvent utilisé par les particuliers).
 
 - Git est un service de versionning (VCS version control system) permettant de gérer les version des codes sur un serveur en ligne (souvent utilisé en entreprise).
@@ -25,15 +25,37 @@ Le code va être stocké sur un repository qui peut être accéder par plusieurs
 La manière https est la manière la moins sécurisé car tout le peut peut avoir le lien du repo et le clone si ce dernier est en public.
 La manière avec une clé ssh est plus sécurisé car cette dernière agit comme un token, elle garantit une sécutité en plus.
 
-# fonctionnement de Git/GitHub
+Plusieurs outils permettent d'accéder aux services de git :
+
+-Git CMD (outil en ligne de commande)
+-GitHub desktop (outil de visualisation et contrôle sur une application)
+
+
+
+# Fonctionnement de Git/GitHub
 
 Git fonctionne en plusieurs étapes entre le code local, l'index et le serveur en ligne.
 
-La première étape (qui peut être facultative si le repo est créé directement en ligne) va être d'initialisé le dossier en tant que repo git :
+## Config initiale (depuis source local)
+
+La première étape va être d'initialisé le dossier en tant que repo git :
 ```
 git init
 ```
-On a donc notre code local qui est prêt à indexé ses fichiers (on parle d'indexage pour le fait à transféré ses fichiers vers l'index.
+## Config initiale (depuis source en ligne)
+
+Git/GitHub nous laissent la possiblité de créer nos repository en ligne directement depuis son site, pour cela on va 
+- créer un repo 
+- lui donner un nom
+- ajouter un README ( facultatif)
+ 
+ on aura donc par defaut un lien de repo git qui va nous servir de connexion vers le repo 
+ 
+ il suffit alors de faire :
+
+
+
+On a donc notre code local qui est prêt à indexé ses fichiers (on parle d'indexage pour le fait à transféré ses fichiers vers l'index).
 
 L'index est la zone intermédiaire entre le code local et le code en ligne, on peut le représenter de cette manière : 
 
