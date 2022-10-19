@@ -78,5 +78,9 @@ Généralement on utilise une autre manière de faire, en utilisant des branches
 
 Les branches sont des espaces parrallèle qui provienent de la même source (le main sur GitHub ou master sur Git).
 
-Le but des branches est de structurer et organisz
+Le but des branches est de structurer et organiser les membres sur le projet.
+
+/!\/!\/!\/!\/!\/!\ NE JAMAIS TRAVAILLER SUR LE MASTER /!\/!\/!\/!\/!\/!\/!\/!\ Toujours travailler sur une branche
+
+Les branches vont petre très utiles pour réaliser des pull request
 
