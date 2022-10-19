@@ -141,7 +141,7 @@ git commit -m "message expliquant clairement ce qu'elle a fait"
 git push origin main
 ```
 
-## Pull request (recupération de contenu du main depuis sa branche secondaire)
+## Pull request et Merge request (recupération de contenu du main depuis sa branche secondaire)
 
 Il est possible de demander une récupération de code de la branche main au propriétaire directement via un pull request.
 
@@ -151,7 +151,7 @@ Reprenons notre exemple précédent, dans notre projet la branche main à été 
 Pour rattraper ce retard il va faire une demande de pull request.
 <img width="903" alt="image" src="https://user-images.githubusercontent.com/90316879/196640510-f6a36d63-2608-4d4d-8acd-de8645d95ef4.png">
 
-Le propriétaitre va alors accepter ou non cette requête, s'il acccepte la request sera fermée et la branche de Corentin aura bien récupéré le contenu du main. 
+Le propriétaitre va alors accepter ou non cette requête (pour lui ce sera une merge Request), s'il acccepte la request sera fermée et la branche de Corentin aura bien récupéré le contenu du main. 
 
 
 
