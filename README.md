@@ -37,6 +37,6 @@ On a donc notre code local qui est prêt à indexé ses fichiers (on parle d'ind
 
 L'index est la zone intermédiaire entre le code local et le code en ligne, on peut le représenter de cette manière : 
 
-https://cdn.nulab.com/learn-wp/app/uploads/2022/09/14212531/git_workflow_001.png
+![git_workflow_001](https://user-images.githubusercontent.com/90316879/196621879-a3470e86-29d4-4618-9851-654fce8cbf0c.png)
 
 
