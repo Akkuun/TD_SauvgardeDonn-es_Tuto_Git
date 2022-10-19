@@ -56,7 +56,7 @@ Les fichiers vont être transportés vers l'index, la prochaine étape est de po
 git commit -m "rectification condition boucle pour eviter cas overflow"
 ```
 
-puis 
+puis (Cf branche)
 
 ```
 git push origin [branche]
