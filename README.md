@@ -76,3 +76,7 @@ Généralement on utilise une autre manière de faire, en utilisant des branches
 
 # Branche
 
+Les branches sont des espaces parrallèle qui provienent de la même source (le main sur GitHub ou master sur Git).
+
+Le but des branches est de structurer et organisz
+
