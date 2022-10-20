@@ -21,11 +21,20 @@ Plusieurs outils permettent d'accéder aux services de git :
 
 # Fonctionnement de Git/GitHub
 
-Git fonctionne en plusieurs étapes entre le code local, l'index et le serveur en ligne.
+Git fonctionne en plusieurs étapes. Chaque étapes va intéférer avec un ou plsieurs blocs présente dans les outils Git/GitHub.
+
+Le premier bloc est le bloc local ==> la machine de l'utilisateur
+
+Le deuxième bloc est consacré à l'index, une source de sauvgarde temporaire situé entre le code local et le serveur Git/GitHub en ligne
+
+Le dernier bloc lui est consacré aux serveurs Git/GitHub qui sont en ligne.
+
+A travers ce document nous verrons les différentes étapes pour transferer son code sur un serveur en ligne ( points importants, commandes important à savoir, fichiers externe ect...).
 
 ## Config initiale (depuis source local)
 
-La première étape va être d'initialiser le dossier en tant que repo git :
+La première étape va être d'initialiser le dossier sur la machine local en tant que repo git :
+
 ```
 git init
 ```
@@ -51,7 +60,7 @@ git branch -M main
 git remote add origin git@github.com:Akkuun/tt.git
 ```
 
-Si jamais, on veut importer un projet, on peut lui associer une origine ( son point de connexion avec git/gitHub)
+Si jamais, on veut importer un projet, on peut lui associer une origine ( son point de connexion avec un repo git/gitHub existant)
 ```
 git remote add origin git@github.com:user/nomrepo.git
 git branch -M main
@@ -70,13 +79,14 @@ La prochaine étape va être de signifier à git les fichiers qu'on veut transf�
 git add fichier1.txt
 ```
 
-Généralement, on ajoutera tout les fichiers (certains fichiers pourront être filtrés dans un fichier .gitignore qui contiendra les fichiers à ignorer) avec :
+Généralement, on ajoutera tout les fichiers en même (certains fichiers pourront être filtrés dans un fichier .gitignore qui contiendra les fichiers à ignorer Cf Fichier Externes) avec :
 
 ```
 git add .
 ```
 
-Les fichiers vont être transportés vers l'index (une zone de stockage temporaire avant le transfert vers le serveur en ligne). La prochaine étape est de pousser vers le serveur en ligne. Pour cela on va tout d'abord indiquer un message permettant de repérer l'utilité du transfert ( /!\ ces messages doivent bien être clairs et précis afin de ne pas être ambigües!)
+Les fichiers vont être transportés vers l'index (une zone de stockage temporaire avant le transfert vers le serveur en ligne). La prochaine étape est de pousser vers le serveur en ligne. 
+Pour cela on va tout d'abord indiquer un message permettant de repérer l'utilité du transfert ( /!\ ces messages doivent bien être clairs et précis afin de ne pas être ambigües!)
 
 ```
 git commit -m "rectification condition boucle pour eviter cas overflow"
@@ -106,13 +116,40 @@ Une erreur de conflit signifie que du code à été dupliqué sur les deux versi
 Généralement on utilise une autre manière de faire, en utilisant des branches on va éviter au maximum ce genre de problèmes en contrôlant au maximum les erreurs avant qu'elle n'agissent sur la branche main (cf Branches) .
 
 
-# Branche
+# Branches
 
-Les branches sont des espaces parrallèle qui provienent de la même source (le main sur GitHub ou master sur Git).
+Les branches sont des espaces parrallèle qui provienent de l'origine et permettent de travailler sur le même projet à plusieurs. Lors de la création du projet la seule branche présente est la branche main.
 
-Le but des branches est de structurer et organiser les membres sur le projet.
+Le but des branches est de structurer et organiser les membres sur le projet afin d'éviter que des erreurs de code soit transféré sur le repo en ligne.
 
-/!\/!\/!\/!\/!\/!\ NE JAMAIS TRAVAILLER SUR LE MASTER /!\/!\/!\/!\/!\/!\/!\/!\ Toujours travailler sur une branche!
+
+Pour créer une branche, il y a deux manières de faire : 
+
+- depuis l'interface en ligne 
+- ou depuis l'interface de ligne de commande avec
+
+```
+git checkout -b <branch-name>
+```
+
+Un message expliquant que vous avez bien changé de branche devrait apparaitre et lors de votre prochain push, votre code sera sur la nouvelle branche créée.
+
+Attention la commande suivante permet de créer une branche sans changé de branche, le prochain push sera alors toujours sur le main
+
+```
+git branch <branch_name>
+```
+Il est possible également de créer une branche à travers un commit
+
+Pour voir les différentes branches :
+
+```
+git branch -a
+```
+
+
+
+/!\/!\/!\/!\/!\/!\ NE JAMAIS TRAVAILLER SUR LE MASTER/MAIN /!\/!\/!\/!\/!\/!\/!\/!\ Toujours travailler sur une branche!
 
 Les branches vont être très utiles pour réaliser des opérations pour mettre à jour le code par rapport au main/master sans l'interférer.
 Je m'explique, admettons SamSam travaille sur une nouvelle fonctionnalité et veut 
