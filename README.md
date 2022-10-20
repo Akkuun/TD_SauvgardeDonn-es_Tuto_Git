@@ -1,19 +1,5 @@
 # TD_SauvgardeDonnees_Tuto_Git
 
-# README
-Le fichier Readme permet de spécifier et d'indiquer des informations sur projet à l'utilisateur qui va utiliser le repository.
-Le fichier reame.md (markdown) est codé avec un langage de balisage (comme HTML). C'est utilisé pour réaliser différentes structure de style :
-
-# Titre
-## Sous titre
-
-```bash
-  des commandes sur différents langages possible
-```
-
-- proposition
-
-![Logo](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/th5xamgrr6se0x5ro4g6.png)
 
 # Présentation GitHub/Git
 - GitHub est un service permettant de stocker (héberger) des repositories en ligne (souvent utilisé par les particuliers).
@@ -71,6 +57,7 @@ git remote add origin git@github.com:user/nomrepo.git
 git branch -M main
 ```
 
+### Tranfert de fichiers vers les serveurs Git (git add, git commit) 
 
 On a donc notre code local qui est prêt à indexer ses fichiers (on parle d'indexage pour le fait de transférer ses fichiers vers l'index).
 
@@ -112,6 +99,7 @@ git push
 Voilà le code est bien poussé sur le serveur en ligne !
 
 
+
 # Erreur de conflit 
 Une erreur de conflit signifie que du code à été dupliqué sur les deux version du code (local et celle en ligne), pour cela plusieurs manière de faire, directement faire les changements sur l'IDE, les lignes qui ont été ajouté seront avec un + devant, et celles supprimées avec - , il n'y a plus qu'à garder les lignes voulues.
 
@@ -141,6 +129,8 @@ git commit -m "message expliquant clairement ce qu'elle a fait"
 git push origin main
 ```
 
+# Fonctionnalité en plus importante
+
 ## Pull request et Merge request (mise à jour de branche participative à Mise à jour de branche originelle)
 
 Il est possible de demander une récupération de code de la branche main au propriétaire directement via un pull request.
@@ -161,7 +151,7 @@ Le Merge request est la même chose mais dans l'autre sens, la modification vien
 Pour résumer, il existe des fonctionnalités permettant de faire beaucoup de tracabilité sur l'historique du projet afin de le rendre le plus sécurisé en diminuant le risque de non retour à cause de mauvaise manipulation.
 
 
-# Fork
+## Fork
 
 Au sein de GitHub, un « fork » constitue une simple copie d'un projet au sein de votre espace de nom personnel, ce qui vous permet d'y apporter publiquement des modifications, c'est donc tout simplement un moyen de contribuer de manière plus ouverte.
 
@@ -171,4 +161,31 @@ Un fork réalisé, cela permet aussi d'accéder à tout l'historique du projet( 
 
 Je pense que si on utilise un projet dans un cadre d'une réalisation à but d'évolution, il faut réaliser un fork pour pouvoir avoir tout l'hsitorique du projet et repecter le travail réalisé auparavant par les créateur du repo d'origine.
 
+
+# Fichier Externes géré par Git
+## README
+Le fichier Readme permet de spécifier et d'indiquer des informations sur projet à l'utilisateur qui va utiliser le repository.
+Le fichier reame.md (markdown) est codé avec un langage de balisage (comme HTML). C'est utilisé pour réaliser différentes structure de style :
+
+   # Titre
+   ## Sous titre
+
+```bash
+  des commandes sur différents langages possible
+```
+
+- proposition
+
+![Logo](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/th5xamgrr6se0x5ro4g6.png)
+
+
+
+diff,roolback, checkout
+
+gestion de projet   ( tag dans commit)
+git confign git ignore
+
+reverte
+
+clone
 
