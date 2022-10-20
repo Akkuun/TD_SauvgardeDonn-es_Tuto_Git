@@ -155,7 +155,20 @@ Le propriétaitre va alors accepter ou non cette requête s'il acccepte la reque
 
 
 
-Le Merge request est la même chose mais dans l'autre sens, la modification vient de la branche secondaire et une demande va être réaliser pour fusionner le contenu de la branche secondaire sur la branche main.
+Le Merge request est la même chose mais dans l'autre sens, la modification vient de la branche émétrice et une demande va être réaliser pour fusionner le contenu de la branche émétrice sur une branche destinée.
 
 
 Pour résumer, il existe des fonctionnalités permettant de faire beaucoup de tracabilité sur l'historique du projet afin de le rendre le plus sécurisé en diminuant le risque de non retour à cause de mauvaise manipulation.
+
+
+# Fork
+
+Au sein de GitHub, un « fork » constitue une simple copie d'un projet au sein de votre espace de nom personnel, ce qui vous permet d'y apporter publiquement des modifications, c'est donc tout simplement un moyen de contribuer de manière plus ouverte.
+
+/!\ à différentier avec un simple clone, le clone va lui copier un projet en local tandis que le fork est un ecopie contributive qui permet de connaitre la source du projet initiale. Bien évidemment un fork peut intéragir avec son répo originel.
+
+Un fork réalisé, cela permet aussi d'accéder à tout l'historique du projet( version du code, message des commits....).
+
+Je pense que si on utilise un projet dans un cadre d'une réalisation à but d'évolution, il faut réaliser un fork pour pouvoir avoir tout l'hsitorique du projet et repecter le travail réalisé auparavant par les créateur du repo d'origine.
+
+
