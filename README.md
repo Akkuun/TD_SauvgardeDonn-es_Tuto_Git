@@ -153,8 +153,9 @@ Pour rattraper ce retard il va faire une demande de pull request (toujours avec 
 
 Le propriétaitre va alors accepter ou non cette requête s'il acccepte la request sera fermée et la branche de Corentin aura bien récupéré le contenu du main. 
 
-Pour résumer, la
 
 
-Le Merge request est la même chose mais dans l'autre sens 
+Le Merge request est la même chose mais dans l'autre sens, la modification vient de la branche secondaire et une demande va être réaliser pour fusionner le contenu de la branche secondaire sur la branche main.
 
+
+Pour résumer, il existe des fonctionnalités permettant de faire beaucoup de tracabilité sur l'historique du projet afin de le rendre le plus sécurisé en diminuant le risque de non retour à cause de mauvaise manipulation.
