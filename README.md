@@ -1,8 +1,8 @@
 # TD_SauvgardeDonnees_Tuto_Git
 
-# REAME
-Le fichier Readme permet de spécifié et d'indiquer des infos sur projet à l'utilisateur qui va utiliser le repository.
-Le fichier reame.md (markdown) est codé avec un lagagUe de balisage (comme HTML), c'est utilisé pour réaliser différentes structure de style :
+# README
+Le fichier Readme permet de spécifier et d'indiquer des informations sur projet à l'utilisateur qui va utiliser le repository.
+Le fichier reame.md (markdown) est codé avec un langage de balisage (comme HTML). C'est utilisé pour réaliser différentes structure de style :
 
 # Titre
 ## Sous titre
@@ -16,20 +16,20 @@ Le fichier reame.md (markdown) est codé avec un lagagUe de balisage (comme HTML
 ![Logo](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/th5xamgrr6se0x5ro4g6.png)
 
 # Présentation GitHub/Git
-- GitHub est un service permettant de stocker (héberger) des repository en ligne (souvent utilisé par les particuliers).
+- GitHub est un service permettant de stocker (héberger) des repositories en ligne (souvent utilisé par les particuliers).
 
-- Git est un service de versionning (VCS version control system) permettant de gérer les version des codes sur un serveur en ligne (souvent utilisé en entreprise).
+- Git est un service de versionning (VCS version control system) permettant de gérer les versions des codes sur un serveur en ligne (souvent utilisé en entreprise).
 
-Le code va être stocké sur un repository qui peut être accéder par plusieurs manière , via ssh ou https.
+Le code va être stocké sur un repository qui peut être accédé par plusieurs manières, via ssh ou https.
 
-La manière https est la manière la moins sécurisé car tout le peut peut avoir le lien du repo et le clone si ce dernier est en public.
+La manière https est la moins sécurisée car tout le monde peut avoir le lien du repository et le clone si ce dernier est en public.
 
-La manière avec une clé ssh est plus sécurisé car cette dernière agit comme un token, elle garantit une sécutité en plus.
+La manière avec une clé ssh est plus sécurisée car cette dernière agit comme un token: elle garantit une sécutité en plus.
 
 Plusieurs outils permettent d'accéder aux services de git :
 
 -Git CMD (outil en ligne de commande)
--GitHub desktop (outil de visualisation et contrôle sur une application)
+-GitHub desktop (outil de visualisation et de contrôle sur une application)
 
 
 
@@ -39,7 +39,7 @@ Git fonctionne en plusieurs étapes entre le code local, l'index et le serveur e
 
 ## Config initiale (depuis source local)
 
-La première étape va être d'initialisé le dossier en tant que repo git :
+La première étape va être d'initialiser le dossier en tant que repo git :
 ```
 git init
 ```
@@ -47,15 +47,15 @@ git init
 
 
 ### Création de dépôt en ligne 
-Git/GitHub nous laissent la possiblité de créer nos repository en ligne directement depuis son site, pour cela on va 
+Git/GitHub nous laisse la possiblité de créer nos repositories en ligne directement depuis son site. Pour cela, on va 
 - créer un repo 
 - lui donner un nom
 - ajouter un README ( facultatif)
-- ajouter des fichiers en plus (comme la license, gitignore (cf gitignore) ect.. (facultatif)
+- ajouter des fichiers en plus comme la license, gitignore (cf gitignore) ect.. (facultatif)
  
- on aura donc par defaut un lien de repo git qui va nous servir de connexion vers le repo.
+ On aura donc par defaut un lien de repo git qui va nous servir de connexion vers le repo.
  
- on peut alors initaliser le repo vide et lui envoyer nos fichiers on peut faire :
+ On peut alors initaliser le repo vide et lui envoyer nos fichiers. On peut faire :
  ``` 
  echo "# tt" >> README.md
 git init
@@ -65,45 +65,45 @@ git branch -M main
 git remote add origin git@github.com:Akkuun/tt.git
 ```
 
-si jamais, on veut importer un projet, on peut lui associer une origine ( son point de connexion avec git/gitHub)
+Si jamais, on veut importer un projet, on peut lui associer une origine ( son point de connexion avec git/gitHub)
 ```
 git remote add origin git@github.com:user/nomrepo.git
 git branch -M main
 ```
 
 
-On a donc notre code local qui est prêt à indexer ses fichiers (on parle d'indexage pour le fait à transféré ses fichiers vers l'index).
+On a donc notre code local qui est prêt à indexer ses fichiers (on parle d'indexage pour le fait de transférer ses fichiers vers l'index).
 
-L'index est la zone intermédiaire entre le code local et le code en ligne, on peut le représenter de cette manière : 
+L'index est la zone intermédiaire entre le code local et le code en ligne. On peut le représenter de cette manière : 
 
 ![git_workflow_001](https://user-images.githubusercontent.com/90316879/196621879-a3470e86-29d4-4618-9851-654fce8cbf0c.png)
 
-La prochaine étape va être de signifié à git les fichiers qu'on veut transféré : 
+La prochaine étape va être de signifier à git les fichiers qu'on veut transférer : 
 ```
 git add fichier1.txt
 ```
 
-généralement on ajoutera tout les fichiers ( certains fichiers pourront être filtré dans un fichier .gitignore qui contiendra les fichiers à ignorer) avec :
+Généralement, on ajoutera tout les fichiers (certains fichiers pourront être filtrés dans un fichier .gitignore qui contiendra les fichiers à ignorer) avec :
 
 ```
 git add .
 ```
 
-Les fichiers vont être transportés vers l'index, la prochaine étape est de pousser vers le serveur en ligne. Pour cela on va tout d'abord indiquer un message permettant de repérer l'utilité du transfert ( /!\ ces messages doit bien être clairs et précis afin de ne pas être ambigüe!)
+Les fichiers vont être transportés vers l'index (une zone de stockage temporaire avant le transfert vers le serveur en ligne). La prochaine étape est de pousser vers le serveur en ligne. Pour cela on va tout d'abord indiquer un message permettant de repérer l'utilité du transfert ( /!\ ces messages doivent bien être clairs et précis afin de ne pas être ambigües!)
 
 ```
 git commit -m "rectification condition boucle pour eviter cas overflow"
 ```
 
 
-Si jamais il ne passe pas, cela signifie qu'il y a des erreurs de conflit (Cf Erreur de conflit)
+Si jamais il ne passe pas, cela signifie qu'il y a des erreurs de conflit (Cf Erreur de conflit).
 
-puis on va pousser vers une origine (ici notre branche) (Cf branche)
+Puis on va pousser vers une origine (ici notre branche) (Cf branche)
 
 ```
 git push origin [branche]
 ```
-bien sûr si on travaille seul sur une branche main on peut push sur le master directement mais c'est une mauvaise habitude de travail à avoir (Cf branche)
+Bien sûr, si on travaille seul sur une branche main, on peut push sur le master directement mais c'est une mauvaise habitude de travail à avoir (Cf branche)
 
 ```
 git push
@@ -141,17 +141,21 @@ git commit -m "message expliquant clairement ce qu'elle a fait"
 git push origin main
 ```
 
-## Pull request (recupération de contenu du main depuis sa branche secondaire)
+## Pull request et Merge request (mise à jour de branche participative à Mise à jour de branche originelle)
 
 Il est possible de demander une récupération de code de la branche main au propriétaire directement via un pull request.
 
 Reprenons notre exemple précédent, dans notre projet la branche main à été mise à jour par SamSam auparavant et Corentin vient de revenir de vacances et veut travailler sur une fonctionnalité, pour cela il doit récupérer la dernière version à jour du main, il pour cela il peut aller sur Git/GitHub et voir une option qui indique qu'il a du retard par rapport à la version du code du main :
 <img width="660" alt="image" src="https://user-images.githubusercontent.com/90316879/196640143-f886ad6b-457e-4083-94f7-3c4497b3ad1d.png">
 
-Pour rattraper ce retard il va faire une demande de pull request.
+Pour rattraper ce retard il va faire une demande de pull request (toujours avec un message scpécifiant cette demande.
 <img width="903" alt="image" src="https://user-images.githubusercontent.com/90316879/196640510-f6a36d63-2608-4d4d-8acd-de8645d95ef4.png">
 
-Le propriétaitre va alors accepter ou non cette requête, s'il acccepte la request sera fermée et la branche de Corentin aura bien récupéré le contenu du main. 
+Le propriétaitre va alors accepter ou non cette requête s'il acccepte la request sera fermée et la branche de Corentin aura bien récupéré le contenu du main. 
 
 
 
+Le Merge request est la même chose mais dans l'autre sens, la modification vient de la branche secondaire et une demande va être réaliser pour fusionner le contenu de la branche secondaire sur la branche main.
+
+
+Pour résumer, il existe des fonctionnalités permettant de faire beaucoup de tracabilité sur l'historique du projet afin de le rendre le plus sécurisé en diminuant le risque de non retour à cause de mauvaise manipulation.
