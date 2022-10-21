@@ -26,7 +26,7 @@ Un repository est un emplacement où est stocké le code en ligne, il se comport
 
 - exemple de chemin : Maths/algo/fichierTest
 
-## Clone 
+## récupération d'un repo  
 Le code qui va être stocké sur un repository peut être récupéré par plusieurs manières, via ssh ou https.
 
 La manière https est la moins sécurisée car tout le monde peut avoir le lien du repository si ce dernier est en public.
@@ -38,6 +38,26 @@ Plusieurs outils permettent d'accéder aux services de git  (Cf installation pou
 -Git CMD (outil en ligne de commande)
 -GitHub desktop (outil de visualisation et de contrôle sur une application)
 
+on peut aussi faire une copie d'un répo directement avec la commande git clone 
+
+````
+git clone ssh://john@example.com/path/to/my-project.git 
+
+````
+
+Plusieurs options de code existe aussi :
+
+Clonage dans un dossier spécifique
+````
+git clone <repo> <directory>
+````
+
+Lors du premier clone, Git/GitHub va nous demande de nous identifier via git config: 
+````
+
+git config --global user.name "John Doe"
+git config --global user.email johndoe@example.com
+````
 
 # Fonctionnement de Git/GitHub
 
@@ -141,8 +161,33 @@ pour régler cela, il y a plusieurs manière de faire:
 - Utiliser différentes commandes pour réglers les problèmes( Cf git diff, status)
 
 Généralement on utilise une autre manière de faire, en utilisant des branches on va éviter au maximum ce genre de problèmes en contrôlant au maximum les erreurs avant qu'elle n'agissent sur la branche main (cf Branches) .
+## git diff
+Si jamais il y a des erreurs, la commande git diff est très utile pour trouver ce qui a changé entre 2 points dans l'historique de votre projet, ou pour voir quelle personne a essayé d'introduire une nouvelle branche, etc.
+
+Git diff sans paramètre donne les différences le dernier commit, votre index, et votre répertoire
+````
+git diff 
+````
+ou alors entre 2 branches avec 
+
+````
+git diff [branchName]
+
+````
+## git revert
 
 
+Git revert permet de réaliser un commit pour annuler un commit précédent qui aurait ajouté des erreurs dans le projet, cette commande est très utile pour revenir à un état stable du projet: 
+
+````
+git revert [Commit ID]
+````
+
+pour voir l'ensembe les ID des commits précédent utiliser  faire :
+
+````
+git log
+````
 # Branches
 
 Les branches sont des espaces parrallèle qui provienent de l'origine et permettent de travailler sur le même projet à plusieurs. Lors de la création du projet la seule branche présente est la branche main.
@@ -198,10 +243,11 @@ git push origin main
 # Fonctionnalité en plus importante
 
 ## Pull request et Merge request (mise à jour de branche participative à Mise à jour de branche originelle)
-
-Il est possible de demander une récupération de code de la branche main au propriétaire directement via un pull request grace à l'interface en ligne /application ou avec la commande git merge :
-
-
+ Les pull et pull request permette de recupérer l'ensemble des fichiers non présent sur la branche active depuis une cible cité en paramètre :
+ 
+ ```
+ git pull origin [branchName]
+ ```
 
 ### Exemple pull request 
 Reprenons notre exemple précédent, dans notre projet la branche main à été mise à jour par SamSam auparavant et Corentin vient de revenir de vacances et veut travailler sur une fonctionnalité, pour cela il doit récupérer la dernière version à jour du main, il pour cela il peut aller sur Git/GitHub et voir une option qui indique qu'il a du retard par rapport à la version du code du main :
@@ -211,6 +257,10 @@ Pour rattraper ce retard il va faire une demande de pull request (toujours avec 
 <img width="903" alt="image" src="https://user-images.githubusercontent.com/90316879/196640510-f6a36d63-2608-4d4d-8acd-de8645d95ef4.png">
 
 Le propriétaitre va alors accepter ou non cette requête s'il acccepte la request sera fermée et la branche de Corentin aura bien récupéré le contenu du main. 
+ ou alors faire la commande 
+ ````
+ git pull origin [main]     ou master si GitLab
+ ````
 
 ### Exemple merge request
 
@@ -366,12 +416,9 @@ Cette page permet de visualiser des statistiques sur le repo :
 ![image](https://user-images.githubusercontent.com/90316879/197269082-729e2aa1-ef20-4fb1-ae2f-d59d236aebac.png)
 
 
-diff,roolback,
-
-git confign git 
 
 
-reverte
 
-clone
+
+
 
