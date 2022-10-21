@@ -22,15 +22,16 @@ Pour résumé :Git est un logiciel de gestion de version tandis que GitHub est u
 
 # Repository
 
-Un repository est un emplacement où est stocké le code en ligne, il se comporte dans leurs structure comme des dossiers en arborescence et plusisuers dossiers peuvent exister dans un repo. On pourra retrouver nos fichiers à travers nos chemins de dossier comme sur une machine classique :
+Un repository est un emplacement où est stocké le code en ligne, il se comporte dans leurs structure comme des dossiers en arborescence et plusieurs dossiers peuvent exister dans un repo. On pourra retrouver nos fichiers à travers nos chemins de dossier comme sur une machine classique :
 
-- exmple de chemin : Maths/algo/fichierTest
+- exemple de chemin : Maths/algo/fichierTest
 
-Le code qui va être stocké sur un repository peut être accédé par plusieurs manières, via ssh ou https.
+## Clone 
+Le code qui va être stocké sur un repository peut être récupéré par plusieurs manières, via ssh ou https.
 
-La manière https est la moins sécurisée car tout le monde peut avoir le lien du repository et le clone si ce dernier est en public.
+La manière https est la moins sécurisée car tout le monde peut avoir le lien du repository si ce dernier est en public.
 
-La manière avec une clé ssh est plus sécurisée car cette dernière agit comme un token: elle garantit une sécutité en plus.
+La manière avec une clé ssh est plus sécurisée car cette dernière agit comme un token: elle garantit une sécurité en plus.
 
 Plusieurs outils permettent d'accéder aux services de git  (Cf installation pour plus de details concernant l'installation):
 
@@ -66,7 +67,8 @@ Git/GitHub nous laisse la possiblité de créer nos repositories en ligne direct
 - lui donner un nom
 - ajouter un README ( facultatif)
 - ajouter des fichiers facultatif en plus comme la license, gitignore (cf fichier généré par Git)
- 
+ <img width="581" alt="image" src="https://user-images.githubusercontent.com/90316879/197238657-f008f75c-fe59-4ece-b949-37d11cbfcdb0.png">
+
  On aura donc par defaut un lien de repo git qui va nous servir de connexion vers le repo.
  
  On peut alors initaliser le repo vide et lui envoyer nos fichiers. On peut faire :
@@ -221,13 +223,15 @@ Par exemple, je suis dans la branche A. Je fais
 git merge origin B
 ```
 
+Le contenu de B va être fusionné avec A sur la branche A.  /!\ Bien vérifier d'être sur la bonne branche pour réaliser le merge!
+
 Il est possible de faire uniquement cette commande avec git merge, ce qui va merge le contenu de la branche actuelle avec la branche spécifié par défaut du répo.
 
 ```
 git merge
 ```
 
-Le contenu de A va être fusionné avec B sur la branche A.  /!\ Bien vérifier d'être sur la bonne branche pour réaliser le merge!
+
 
 
 ## Log
@@ -284,7 +288,7 @@ Git proposes un service sur  Les tags sont des réfs qui pointent vers des point
 
 diff,roolback,
 
-gestion de projet   ( tag dans commit)
+gestion de projet   ( tag dans commit), ticket
 git confign git 
 
 
