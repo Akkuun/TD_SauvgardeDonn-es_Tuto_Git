@@ -3,11 +3,13 @@
 Ce document est un résumé exhaustif qui reprend les principaux principes et commandes de Git/GitHub. le but de ce document est d'avoir compris les principaux fondamentaux de ces outils et de commencer à avoir de bonnes pratique vis à vis de ce dernier.
 
 
-## Historique de Git
+# Historique de Git
 
 Git est un logiciel de gestion de versions décentralisé. C'est un logiciel libre et gratuit, créé en 2005 par Linus Torvalds, auteur du noyau Linux, et distribué selon les termes de la licence publique générale GNU version 2. Le principal contributeur actuel de Git, et ce depuis plus de 16 ans, est Junio C Hamano.
 
 Depuis les années 2010, il s’agit du logiciel de gestion de versions le plus populaire dans le développement logiciel et web, qui est utilisé par des dizaines de millions de personnes, sur tous les environnements (Windows, Mac, Linux)3. Git est aussi le système à la base du célèbre site web GitHub, le plus important hébergeur de code informatique.
+
+Git à été racheté par Microsoft le 4 juin 2018 pour une somme de 7,8 Millliard.
 
 
 
@@ -128,7 +130,13 @@ Voilà le code est bien poussé sur le serveur en ligne !
 
 
 # Erreur de conflit 
-Une erreur de conflit signifie que du code à été dupliqué sur les deux version du code (local et celle en ligne), pour cela plusieurs manière de faire, directement faire les changements sur l'IDE, les lignes qui ont été ajouté seront avec un + devant, et celles supprimées avec - , il n'y a plus qu'à garder les lignes voulues.
+
+Les conflits surviennent généralement lorsque deux personnes ont modifié les mêmes lignes dans un fichier, ou si un développeur a supprimé un fichier alors qu'un autre développeur le modifiait. Dans ces cas, Git ne peut pas déterminer automatiquement la version correcte. Les conflits n'affectent que le développeur qui effectue le merge, les autres membres de l'équipe ne sont pas conscients du conflit. Git marquera le fichier comme étant en conflit et arrêtera le processus de merge. Il incombe alors aux développeurs de résoudre le conflit.
+
+pour régler cela, il y a plusieurs manière de faire:
+- Directement faire les changements sur l'IDE, les lignes qui ont été ajouté seront avec un + devant, et celles supprimées avec - , il n'y a plus qu'à garder les lignes voulues.
+- Supprimer les erreurs depuis l'application (GitDesktop)
+- Utiliser différentes commandes pour réglers les problèmes( Cf git diff, status)
 
 Généralement on utilise une autre manière de faire, en utilisant des branches on va éviter au maximum ce genre de problèmes en contrôlant au maximum les erreurs avant qu'elle n'agissent sur la branche main (cf Branches) .
 
@@ -205,15 +213,26 @@ Pour rattraper ce retard il va faire une demande de pull request (toujours avec 
 Le propriétaitre va alors accepter ou non cette requête s'il acccepte la request sera fermée et la branche de Corentin aura bien récupéré le contenu du main. 
 
 ### Exemple merge request
-Le Merge request est la même chose mais dans l'autre sens, la modification vient de la branche émétrice et une demande va être réaliser pour fusionner le contenu de la branche émétrice par rapport à la branche destinée.
+Le Merge request permet de fusionner toutes les ressource nécéssaire pour que la branche actuelle recoive tout le contenu de la branche passé en paramètre.
 
+Par exemple, je suis dans la branche A. Je fais
 
-Pour résumer, il existe des fonctionnalités permettant de faire beaucoup de tracabilité sur l'historique du projet afin de le rendre le plus sécurisé en diminuant le risque de non retour à cause de mauvaise manipulation.
+```
+git merge origin B
+```
+
+Il est possible de faire uniquement cette commande avec git merge, ce qui va merge le contenu de la branche actuelle avec la branche spécifié par défaut du répo.
+
+```
+git merge
+```
+
+Le contenu de A va être fusionné avec B sur la branche A.  /!\ Bien vérifier d'être sur la bonne branche pour réaliser le merge!
 
 
 ## Log
 
-Pour voir l'historique des commits sur la branche actuelle, on peut utiliser la commaande git log, qui nous donnera la description du dernier commmit qui est composé de cette manière : 
+Pour voir l'historique des commits sur la branche actuelle, on peut utiliser la commande git log, qui nous donnera la description du dernier commmit qui est composé de cette manière : 
 Commit : xxxxxxx (identifiant du commit)
 Author : xxxx
 Date : 
@@ -227,11 +246,11 @@ git log
 
 Au sein de GitHub, un « fork » constitue une simple copie d'un projet au sein de votre espace de nom personnel,ce qui permet de récupérer en plus des codes, historique des commits, des ressources utilisées ect ...
 
-/!\ à différentier avec un simple clone, le clone va lui copier un projet en local qui sera syncronisé avec le serveur tandis que le fork est un "clone" indépedant du repo originelle qui pourra faire son cycle de vie à part sans être synchrnonisé au repo du main.
+/!\ à différentier avec un simple clone, le clone va lui copier un projet en local qui sera syncronisé avec le serveur tandis que le fork est une duplication indépedante du repo originelle qui pourra faire son cycle de vie à part sans être synchrnonisé au repo du main.
 
-Un fork réalisé, cela permet aussi d'accéder à tout l'historique du projet( version du code, message des commits....).
+Une fois le fork réalisé, cela permet aussi d'accéder à tout l'historique du projet( version du code, message des commits....).
 
-Je pense que si on utilise un projet dans un cadre d'une réalisation à but d'évolution, il faut réaliser un fork pour pouvoir avoir tout l'hsitorique du projet et repecter le travail réalisé auparavant par les créateur du repo d'origine.
+Je pense que si on utilise un projet dans un cadre d'une réalisation à but d'évolution, il faut réaliser un fork pour pouvoir avoir tout l'hsitorique du projet et repecter le travail réalisé auparavant par les créateur du repo d'origine afin de travailler de notre côté avec toutes les ressources dupliquées.
 
 
 # Fichier Externes géré par Git
@@ -258,7 +277,9 @@ voici un exmple d'un fichier .ignore
 
 <img width="901" alt="image" src="https://user-images.githubusercontent.com/90316879/197197009-c0d03690-e568-4a9c-a6b3-75cd08920f47.png">
 
-
+# tag
+ à faire
+Git proposes un service sur  Les tags sont des réfs qui pointent vers des points spécifiques de l'historique Git. Les tags sont généralement utilisés pour capturer un point de l'historique utilisé pour une version marquée (c. -à-d., v1. 0.1).
 
 
 diff,roolback,
