@@ -412,4 +412,8 @@ Cette page permet de visualiser des statistiques sur le repo :
 ![image](https://user-images.githubusercontent.com/90316879/197269082-729e2aa1-ef20-4fb1-ae2f-d59d236aebac.png)
 
 
+# Installation Git/GitHub
+
+Pour installer Git il suffit de suivre les instructions sur ce lien : https://git-scm.com/downloads
+ou alors aller sur la version en ligne avec un navigateur et se connecter à son compte.
 
