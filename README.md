@@ -131,8 +131,8 @@ Le but des branches est de structurer et organiser les membres sur le projet afi
 
 Pour créer une branche, il y a deux manières de faire : 
 
-- depuis l'interface en ligne 
-- ou depuis l'interface de ligne de commande avec
+- depuis l'interface en ligne  (on parlera de GUI Git User Interface)
+- ou depuis l'interface de ligne de commande (on parlera de CLI Command-line interface)
 
 ```
 git checkout -b <branch-name>
