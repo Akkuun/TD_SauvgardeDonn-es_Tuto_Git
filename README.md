@@ -1,6 +1,6 @@
 # TD_SauvgardeDonnees_Tuto_Git
 
-Ce document est un résumé exhaustif qui reprend les principaux principes et commandes de Git/GitHub. le but de ce document est d'avoir compris les principaux fondamentaux de ces outils et de commencer à avoir de bonnes pratique vis à vis de ce dernier.
+Ce document est un résumé exhaustif qui reprend les principaux principes et commandes de Git/GitHub. le but de ce document est d'avoir compris les principaux fondamentaux de ces outils et de commencer à avoir de bonnes pratique vis à vis de ce dernier (Cf Workflow).
 
 
 # Historique de Git
@@ -284,6 +284,27 @@ voici un exmple d'un fichier .ignore
 # tag
  à faire
 Git proposes un service sur  Les tags sont des réfs qui pointent vers des points spécifiques de l'historique Git. Les tags sont généralement utilisés pour capturer un point de l'historique utilisé pour une version marquée (c. -à-d., v1. 0.1).
+
+# WorkFlow (Git flow/GitHub flow)
+Git flow est une méthode de travaille (on parle de workFlow) expliquant comment travailler de manière optimisé sur son projet à travers les différentes branches.
+Cette méthode à été proposé par Vincent Driessen en 2010.
+
+Avec cette méthode, le projet doit utiliser seuelement 5 branches : 
+
+Main ==> Represente la branche utilisé en production
+Develop ==> Represente la branche avec les derniers déplacement
+Feature
+Release
+Hotfix
+ 
+ 
+A noté que deux manières de travailler avec cette méthode est possible :
+
+-GitHub Flow qui est plus simple que Git flow destinée pour des teams de dev web et d'application, elle est surtout utiliser pour les opérations DevOPS. Mais cette méthode n'utilise pas toutes les branches de git flow ce qui peut généré des problèmes dans le futur.
+
+-GitLab flow est une alternative à Git flow qui est resemblant dans sa composition 
+
+
 
 
 diff,roolback,
