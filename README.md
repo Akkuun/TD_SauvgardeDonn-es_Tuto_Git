@@ -289,25 +289,6 @@ voici un exmple d'un fichier .ignore
  à faire
 Git proposes un service sur  Les tags sont des réfs qui pointent vers des points spécifiques de l'historique Git. Les tags sont généralement utilisés pour capturer un point de l'historique utilisé pour une version marquée (c. -à-d., v1. 0.1).
 
-# WorkFlow (Git flow/GitHub flow)
-Git flow est une méthode de travaille (on parle de workFlow) expliquant comment travailler de manière optimisé sur son projet à travers les différentes branches.
-Cette méthode à été proposé par Vincent Driessen en 2010.
-
-Avec cette méthode, le projet doit utiliser seuelement 5 branches : 
-
-Main ==> Represente la branche utilisé en production
-Develop ==> Represente la branche avec les derniers déplacement
-Feature
-Release
-Hotfix
- 
- 
-A noté que deux manières de travailler avec cette méthode est possible :
-
--GitHub Flow qui est plus simple que Git flow destinée pour des teams de dev web et d'application, elle est surtout utiliser pour les opérations DevOPS. Mais cette méthode n'utilise pas toutes les branches de git flow ce qui peut généré des problèmes dans le futur.
-
--GitLab flow est une alternative à Git flow qui est resemblant dans sa composition 
-
 # Outils de gestion de projet
 
 Git/GitHub donne l'accès aux repo à des fonctionnalité permettant d'ajouter des opération possible au répo.
@@ -326,23 +307,67 @@ Les tickets sont très pratique pour voir l'avancé du projet, Git/GitHub sont t
 Pour cela il suffit de faire :
 
 ```
-
+git commit -m "close #IDTickets
 ```
+
+Plusieurs autres valeurs peuvent être utilisé pour fermé plusieurs tickets en même temps, mais le message doit OBLIGATOIREMENT contenir l'instuction close. Voici la liste des parametres possible : 
+
+close, closes, closed, fix, fixes, fixed, resolve, resolves, resolved
+
+Par exemple :
+
+````
+git commit -m "closes #1, closes #2, closes #3; Message du commit"
+````
 
 
 ## Pull Request
 
+Cette page est dédiée au pull request ouvertes.
+
 ## Action
+
+Cette page est dédié aux différents work flow notamment Git flow.
+
+Git flow est une méthode de travaille (on parle de workFlow) expliquant comment travailler de manière optimisé sur son projet à travers les différentes branches.
+Cette méthode à été proposé par Vincent Driessen en 2010.
+
+Avec cette méthode, le projet doit utiliser seuelement 5 branches : 
+
+Main ==> Represente la branche utilisé en production
+Develop ==> Represente la branche avec les derniers déplacement
+Feature
+Release
+Hotfix
+ 
+ 
+A noté que deux manières de travailler avec cette méthode est possible :
+
+-GitHub Flow qui est plus simple que Git flow destinée pour des teams de dev web et d'application, elle est surtout utiliser pour les opérations DevOPS. Mais cette méthode n'utilise pas toutes les branches de git flow ce qui peut généré des problèmes dans le futur.
+
+-GitLab flow est une alternative à Git flow qui est resemblant dans sa composition 
+
+
+L'action principale utilsé par cette page sont les outils d'intégration continue (CI/CD Sur GitLab), ces outils permettent de faire des test supplémentaire sur différents critère suivant les outils installé. Par exemple la pipeline la plus basique s'occupe de vérifier si le code complile bien, si ce n'est pas le cas la pipeline indiquera une erreur et ne réalisera pas le merge. Ces outils sont très pratique pour des codes déployé au public pour vérifier si les derniers changements on affecté les performances de l'existant, notamment avec des pipelines de test unitaire, test de vitesse de requête ou test de sécurité.
+
+Une fois les actions définie, on peut voir leur état sur la page : 
+
+![image](https://user-images.githubusercontent.com/90316879/197268789-85f2f85e-f7fa-494f-ac4b-374fb176c5ff.png)
+
+
 
 ## Wiki
 
+Cette page est similaire à un fichier README.
+
 ## Insights
 
+Cette page permet de visualiser des statistiques sur le repo :
+![image](https://user-images.githubusercontent.com/90316879/197269082-729e2aa1-ef20-4fb1-ae2f-d59d236aebac.png)
 
 
 diff,roolback,
 
-gestion de projet   ( tag dans commit), ticket
 git confign git 
 
 
