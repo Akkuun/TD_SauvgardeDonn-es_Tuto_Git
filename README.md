@@ -355,8 +355,7 @@ Git/GitHub donne l'accès aux repo à des fonctionnalité permettant d'ajouter d
 
 Cet onglet est dédié aux tickets de gestion de projet permettant de visualiser les tâches en cours pour les différents collaborator.
 
-Un ticket est composé d'un titre, une description, un auteur, un identifiant et un statut (fermé ou ouvert).
-Un ticket peut être crée depuis l'interface de Git/GitHub en ligne : 
+Un ticket est composé d'un titre, une description, un auteur, un identifiant et un statut (fermé ou ouvert).Un ticket peut être crée depuis l'interface de Git/GitHub en ligne : 
 <img width="695" alt="image" src="https://user-images.githubusercontent.com/90316879/197246701-124974c9-8af6-4d89-99f0-a46e428fe836.png">
 
 Les tickets sont très pratique pour voir l'avancé du projet, Git/GitHub sont très puissant car il permette de fermer des tickets directement depuis un commit qui à été un push.
