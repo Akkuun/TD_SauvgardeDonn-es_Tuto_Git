@@ -3,13 +3,24 @@
 Ce document est un résumé exhaustif qui reprend les principaux principes et commandes de Git/GitHub. le but de ce document est d'avoir compris les principaux fondamentaux de ces outils et de commencer à avoir de bonnes pratique vis à vis de ce dernier.
 
 
+## Historique de Git
+
+Git est un logiciel de gestion de versions décentralisé. C'est un logiciel libre et gratuit, créé en 2005 par Linus Torvalds, auteur du noyau Linux, et distribué selon les termes de la licence publique générale GNU version 2. Le principal contributeur actuel de Git, et ce depuis plus de 16 ans, est Junio C Hamano.
+
+Depuis les années 2010, il s’agit du logiciel de gestion de versions le plus populaire dans le développement logiciel et web, qui est utilisé par des dizaines de millions de personnes, sur tous les environnements (Windows, Mac, Linux)3. Git est aussi le système à la base du célèbre site web GitHub, le plus important hébergeur de code informatique.
+
+
 
 # Présentation GitHub/Git
 - GitHub est un service permettant de stocker (héberger) des repositories en ligne (souvent utilisé par les particuliers).
 
 - Git est un service de versionning (VCS version control system) permettant de gérer les versions des codes sur un serveur en ligne (souvent utilisé en entreprise).
 
-Un repository est un emplacement où est stocké le code en ligne, ils se comporte dans leurs structure comme des dossiers en arborescence et plusisuers dossiers peuvent exister dans un repo. On pourra retrouver nos fichiers à travers nos chemins de dossier comme sur une machine classique :
+Pour résumé :Git est un logiciel de gestion de version tandis que GitHub est un service en ligne d’hébergement de dépôts Git qui fait office de serveur central pour ces dépôts.
+
+# Repository
+
+Un repository est un emplacement où est stocké le code en ligne, il se comporte dans leurs structure comme des dossiers en arborescence et plusisuers dossiers peuvent exister dans un repo. On pourra retrouver nos fichiers à travers nos chemins de dossier comme sur une machine classique :
 
 - exmple de chemin : Maths/algo/fichierTest
 
@@ -214,9 +225,9 @@ git log
 
 ## Fork
 
-Au sein de GitHub, un « fork » constitue une simple copie d'un projet au sein de votre espace de nom personnel, ce qui vous permet d'y apporter publiquement des modifications, c'est donc tout simplement un moyen de contribuer de manière plus ouverte.
+Au sein de GitHub, un « fork » constitue une simple copie d'un projet au sein de votre espace de nom personnel,ce qui permet de récupérer en plus des codes, historique des commits, des ressources utilisées ect ...
 
-/!\ à différentier avec un simple clone, le clone va lui copier un projet en local tandis que le fork est un ecopie contributive qui permet de connaitre la source du projet initiale. Bien évidemment un fork peut intéragir avec son répo originel.
+/!\ à différentier avec un simple clone, le clone va lui copier un projet en local qui sera syncronisé avec le serveur tandis que le fork est un "clone" indépedant du repo originelle qui pourra faire son cycle de vie à part sans être synchrnonisé au repo du main.
 
 Un fork réalisé, cela permet aussi d'accéder à tout l'historique du projet( version du code, message des commits....).
 
