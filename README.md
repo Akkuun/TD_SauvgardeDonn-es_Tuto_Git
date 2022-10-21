@@ -26,7 +26,7 @@ Un repository est un emplacement où est stocké le code en ligne, il se comport
 
 - exemple de chemin : Maths/algo/fichierTest
 
-## récupération d'un repo  
+## Récupération d'un repo  
 Le code qui va être stocké sur un repository peut être récupéré par plusieurs manières, via ssh ou https.
 
 La manière https est la moins sécurisée car tout le monde peut avoir le lien du repository si ce dernier est en public.
@@ -107,7 +107,7 @@ git remote add origin git@github.com:user/nomrepo.git
 git branch -M main
 ```
 
-### Tranfert de fichiers vers les serveurs Git (git add, git commit) 
+# Tranfert de fichiers vers les serveurs Git (git add, git commit) 
 
 On a donc notre code local qui est prêt à indexer ses fichiers (on parle d'indexage pour le fait de transférer ses fichiers vers l'index).
 
@@ -336,9 +336,16 @@ voici un exmple d'un fichier .ignore
 <img width="901" alt="image" src="https://user-images.githubusercontent.com/90316879/197197009-c0d03690-e568-4a9c-a6b3-75cd08920f47.png">
 
 # tag
- à faire
-Git proposes un service sur  Les tags sont des réfs qui pointent vers des points spécifiques de l'historique Git. Les tags sont généralement utilisés pour capturer un point de l'historique utilisé pour une version marquée (c. -à-d., v1. 0.1).
-
+ Les tags sont des réfs qui pointent vers des points spécifiques de l'historique Git. Les tags sont généralement utilisés pour capturer un point de l'historique utilisé pour une version marquée (c. -à-d., v1. 0.1).
+ 
+Afficher la liste des tags:
+````
+git tag [nomTag]
+````
+Création d'un tag:
+````
+ git tag -a v`[version] -m "my version 1.4"
+````
 # Outils de gestion de projet
 
 Git/GitHub donne l'accès aux repo à des fonctionnalité permettant d'ajouter des opération possible au répo.
