@@ -1,27 +1,33 @@
 # TD_SauvgardeDonnees_Tuto_Git
 
+Ce document est un résumé exhaustif qui reprend les principaux principes et commandes de Git/GitHub. le but de ce document est d'avoir compris les principaux fondamentaux de ces outils et de commencer à avoir de bonnes pratique vis à vis de ce dernier.
+
+
 
 # Présentation GitHub/Git
 - GitHub est un service permettant de stocker (héberger) des repositories en ligne (souvent utilisé par les particuliers).
 
 - Git est un service de versionning (VCS version control system) permettant de gérer les versions des codes sur un serveur en ligne (souvent utilisé en entreprise).
 
-Le code va être stocké sur un repository qui peut être accédé par plusieurs manières, via ssh ou https.
+Un repository est un emplacement où est stocké le code en ligne, ils se comporte dans leurs structure comme des dossiers en arborescence et plusisuers dossiers peuvent exister dans un repo. On pourra retrouver nos fichiers à travers nos chemins de dossier comme sur une machine classique :
+
+- exmple de chemin : Maths/algo/fichierTest
+
+Le code qui va être stocké sur un repository peut être accédé par plusieurs manières, via ssh ou https.
 
 La manière https est la moins sécurisée car tout le monde peut avoir le lien du repository et le clone si ce dernier est en public.
 
 La manière avec une clé ssh est plus sécurisée car cette dernière agit comme un token: elle garantit une sécutité en plus.
 
-Plusieurs outils permettent d'accéder aux services de git :
+Plusieurs outils permettent d'accéder aux services de git  (Cf installation pour plus de details concernant l'installation):
 
 -Git CMD (outil en ligne de commande)
 -GitHub desktop (outil de visualisation et de contrôle sur une application)
 
 
-
 # Fonctionnement de Git/GitHub
 
-Git fonctionne en plusieurs étapes. Chaque étapes va intéférer avec un ou plsieurs blocs présente dans les outils Git/GitHub.
+Git fonctionne en plusieurs étapes. Chaque étapes va intéférer avec un ou plsieurs blocs présent dans les outils Git/GitHub.
 
 Le premier bloc est le bloc local ==> la machine de l'utilisateur
 
@@ -46,7 +52,7 @@ Git/GitHub nous laisse la possiblité de créer nos repositories en ligne direct
 - créer un repo 
 - lui donner un nom
 - ajouter un README ( facultatif)
-- ajouter des fichiers en plus comme la license, gitignore (cf gitignore) ect.. (facultatif)
+- ajouter des fichiers facultatif en plus comme la license, gitignore (cf fichier généré par Git)
  
  On aura donc par defaut un lien de repo git qui va nous servir de connexion vers le repo.
  
@@ -148,6 +154,8 @@ git branch -a
 ```
 
 
+Il est aussi possible de réaliser une fusion entre une branche secondaire sur la branche actuelle (Cf pull request et Merge request).
+
 
 /!\/!\/!\/!\/!\/!\ NE JAMAIS TRAVAILLER SUR LE MASTER/MAIN /!\/!\/!\/!\/!\/!\/!\/!\ Toujours travailler sur une branche!
 
@@ -170,8 +178,13 @@ git push origin main
 
 ## Pull request et Merge request (mise à jour de branche participative à Mise à jour de branche originelle)
 
-Il est possible de demander une récupération de code de la branche main au propriétaire directement via un pull request.
+Il est possible de demander une récupération de code de la branche main au propriétaire directement via un pull request grace à l'interface en ligne /application ou avec la commande git merge :
 
+```
+git merge origin [branchName]
+```
+
+### Exemple pull request 
 Reprenons notre exemple précédent, dans notre projet la branche main à été mise à jour par SamSam auparavant et Corentin vient de revenir de vacances et veut travailler sur une fonctionnalité, pour cela il doit récupérer la dernière version à jour du main, il pour cela il peut aller sur Git/GitHub et voir une option qui indique qu'il a du retard par rapport à la version du code du main :
 <img width="660" alt="image" src="https://user-images.githubusercontent.com/90316879/196640143-f886ad6b-457e-4083-94f7-3c4497b3ad1d.png">
 
@@ -180,12 +193,23 @@ Pour rattraper ce retard il va faire une demande de pull request (toujours avec 
 
 Le propriétaitre va alors accepter ou non cette requête s'il acccepte la request sera fermée et la branche de Corentin aura bien récupéré le contenu du main. 
 
-
-
-Le Merge request est la même chose mais dans l'autre sens, la modification vient de la branche émétrice et une demande va être réaliser pour fusionner le contenu de la branche émétrice sur une branche destinée.
+### Exemple merge request
+Le Merge request est la même chose mais dans l'autre sens, la modification vient de la branche émétrice et une demande va être réaliser pour fusionner le contenu de la branche émétrice par rapport à la branche destinée.
 
 
 Pour résumer, il existe des fonctionnalités permettant de faire beaucoup de tracabilité sur l'historique du projet afin de le rendre le plus sécurisé en diminuant le risque de non retour à cause de mauvaise manipulation.
+
+
+## Log
+
+Pour voir l'historique des commits sur la branche actuelle, on peut utiliser la commaande git log, qui nous donnera la description du dernier commmit qui est composé de cette manière : 
+Commit : xxxxxxx (identifiant du commit)
+Author : xxxx
+Date : 
+
+```
+git log
+```
 
 
 ## Fork
@@ -200,6 +224,7 @@ Je pense que si on utilise un projet dans un cadre d'une réalisation à but d'�
 
 
 # Fichier Externes géré par Git
+
 ## README
 Le fichier Readme permet de spécifier et d'indiquer des informations sur projet à l'utilisateur qui va utiliser le repository.
 Le fichier reame.md (markdown) est codé avec un langage de balisage (comme HTML). C'est utilisé pour réaliser différentes structure de style :
@@ -215,12 +240,21 @@ Le fichier reame.md (markdown) est codé avec un langage de balisage (comme HTML
 
 ![Logo](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/th5xamgrr6se0x5ro4g6.png)
 
+## git ignore
+
+Un fichier git .ignore est un fichier qui permet de ne pas prendre en compte certains fichier en fonction de leur extension.
+voici un exmple d'un fichier .ignore
+
+<img width="901" alt="image" src="https://user-images.githubusercontent.com/90316879/197197009-c0d03690-e568-4a9c-a6b3-75cd08920f47.png">
 
 
-diff,roolback, checkout
+
+
+diff,roolback,
 
 gestion de projet   ( tag dans commit)
-git confign git ignore
+git confign git 
+
 
 reverte
 
