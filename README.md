@@ -410,6 +410,8 @@ Cette page est similaire à un fichier README.
 
 Cette page permet de visualiser des statistiques sur le repo :
 ![image](https://user-images.githubusercontent.com/90316879/197269082-729e2aa1-ef20-4fb1-ae2f-d59d236aebac.png)
+![image](https://user-images.githubusercontent.com/90316879/197286031-31c005b5-2992-4f5d-a4c6-d498412cfe0a.png)
+
 
 
 # Installation Git/GitHub
