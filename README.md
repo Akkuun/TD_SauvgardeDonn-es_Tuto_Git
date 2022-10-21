@@ -201,9 +201,7 @@ git push origin main
 
 Il est possible de demander une récupération de code de la branche main au propriétaire directement via un pull request grace à l'interface en ligne /application ou avec la commande git merge :
 
-```
-git merge origin [branchName]
-```
+
 
 ### Exemple pull request 
 Reprenons notre exemple précédent, dans notre projet la branche main à été mise à jour par SamSam auparavant et Corentin vient de revenir de vacances et veut travailler sur une fonctionnalité, pour cela il doit récupérer la dernière version à jour du main, il pour cela il peut aller sur Git/GitHub et voir une option qui indique qu'il a du retard par rapport à la version du code du main :
@@ -215,7 +213,13 @@ Pour rattraper ce retard il va faire une demande de pull request (toujours avec 
 Le propriétaitre va alors accepter ou non cette requête s'il acccepte la request sera fermée et la branche de Corentin aura bien récupéré le contenu du main. 
 
 ### Exemple merge request
+
+
+
 Le Merge request permet de fusionner toutes les ressource nécéssaire pour que la branche actuelle recoive tout le contenu de la branche passé en paramètre.
+```
+git merge origin [branchName]
+```
 
 Par exemple, je suis dans la branche A. Je fais
 
@@ -304,6 +308,27 @@ A noté que deux manières de travailler avec cette méthode est possible :
 
 -GitLab flow est une alternative à Git flow qui est resemblant dans sa composition 
 
+# Outils de gestion de projet
+
+Git/GitHub donne l'accès aux repo à des fonctionnalité permettant d'ajouter des opération possible au répo.
+<img width="666" alt="image" src="https://user-images.githubusercontent.com/90316879/197245571-dc3969a2-eba3-413a-8395-c0c0df58c7f8.png">
+
+## Issue
+
+Cet onglet est dédié aux tickets de gestion de projet permettant de visualiser les tâches en cours pour les différents collaborator.
+
+Un ticket est composé d'un titre, une description, un auteur, un identifiant et un statut (fermé ou ouvert).
+Un ticket peut être crée depuis l'interface de Git/GitHub en ligne : 
+<img width="695" alt="image" src="https://user-images.githubusercontent.com/90316879/197246701-124974c9-8af6-4d89-99f0-a46e428fe836.png">
+Ou via ligne de commande :
+
+## Pull Request
+
+## Action
+
+## Wiki
+
+## Insights
 
 
 
